@@ -1,0 +1,67 @@
+(20 points) Getting familiar with common distributions from the exponential family (you can
+submit this in a separate file and zip your submission)
+Write out the mathematical formula for each of the distributions below, stating which variable(s) represents the parameter(s) of the distribution. Indicate whether it models discrete or continuous variables.
+Also, in one or two sentences, describe when this distribution would come in handy during a modeling
+task. They are:
+(a) Gaussian; (b) Bernoulli; (c) Binomial; (d) Multinomial; (e) Exponential; (f) Poisson.
+
+
+(a) GAUSSIAN (Normal Distribution)
+
+f(x|μ,σ²) = (1/√(2πσ²)) * exp(-(x-μ)²/(2σ²))
+
+Parameters: μ (mean), σ² (variance)
+Variable type: Continuous
+
+Models continuous data that clusters around a central value, commonly used 
+for measurement errors, heights, weights, and many natural phenomena.
+
+(b) BERNOULLI Distribution  
+
+P(X=k|p) = p^k * (1-p)^(1-k), where k ∈ {0,1}
+
+Parameters: p (probability of success)
+Variable type: Discrete
+
+Models binary outcomes (success/failure, yes/no), such as coin flips, 
+binary classification problems, or any single trial with two possible outcomes.
+
+(c) BINOMIAL Distribution
+
+P(X=k|n,p) = C(n,k) * p^k * (1-p)^(n-k), where C(n,k) = n!/(k!(n-k)!)
+
+Parameters: n (number of trials), p (probability of success per trial)
+Variable type: Discrete  
+
+This distribution models the number of successes in a fixed number of independent Bernoulli trials. 
+It could maybe be used to analyze the results of surveys or quality control checks. 
+
+(d) MULTINOMIAL Distribution
+
+P(X₁=k₁,...,Xₘ=kₘ|n,p₁,...,pₘ) = (n!/(k₁!...kₘ!)) * ∏(pᵢ^kᵢ)
+
+Parameters: n (number of trials), p₁,...,pₘ (probabilities for each category)
+Variable type: Discrete
+
+Models outcomes when there are more than 2 categories, such as rolling 
+a die multiple times or classification problems with multiple classes.
+
+(e) EXPONENTIAL Distribution
+
+f(x|λ) = λ * exp(-λx) for x ≥ 0
+
+Parameters: λ (rate parameter)
+Variable type: Continuous
+
+Models time between events in a Poisson process, such as time between 
+customer arrivals, lifetime of electronic components, or waiting times.
+
+(f) POISSON Distribution  
+
+P(X=k|λ) = (λ^k * exp(-λ))/k! for k = 0,1,2,...
+
+Parameters: λ (average rate of occurrence)
+Variable type: Discrete
+
+Models count data or rare events occurring in fixed intervals, such as 
+number of emails received per hour, traffic accidents per day, or defects per unit.
